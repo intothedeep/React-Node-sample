@@ -39,4 +39,4 @@ This is a  structure you will have at the end.
 - check localhost:80/
 - you will see basic react app running on your node server.
 
-*you can use gulp or webpack to build automatic building system. later~
+*you can use gulp to build these tasks automatically. wow!
