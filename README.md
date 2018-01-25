@@ -26,9 +26,8 @@ React-Node-sample
 This is a  structure you will have at the end.
 
 - run commands below
-  - cd React-Node-sample
-  - create-react-app app
   - cd app
+  - yarn install
   - yarn build
   - cd..
   - cd server
