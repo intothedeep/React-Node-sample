@@ -8,8 +8,8 @@ Assume that you installed node.js and create-react-app globally, and you know yo
 React-Node-sample
 
 - app
-  node_modules
-  build <<
+  - node_modules
+  - build <<
     ~~
   public
     ~~
