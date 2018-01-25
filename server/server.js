@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "build/index.html"));
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 80;
 const server = http.createServer(app);
 server.listen(PORT, () => {
   console.log("dir == " + __dirname);
