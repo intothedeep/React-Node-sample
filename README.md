@@ -8,20 +8,20 @@ Assume that you installed node.js and create-react-app globally, and you know yo
 React-Node-sample
 
 - app
--- node_modules
--- build <<
---- ***
--- public
---- ***
--- src
---- ***
--- package.json
+  node_modules
+  build <<
+    ~~
+  public
+    ~~
+  src
+    ~~
+  package.json
 
 - server
--- node_modules
--- build <<
--- server.js
--- package.json
+  node_modules
+  build <<
+  server.js
+  package.json
 This is a  structure you will have at the end.
 
 - run commands below
