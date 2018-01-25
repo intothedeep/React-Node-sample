@@ -7,24 +7,24 @@ Assume that you installed node.js and create-react-app globally, and you know yo
 
 React-Node-sample
 
--app
---node_modules
---build <<
+- app
+-- node_modules
+-- build <<
 --- ***
---public
+-- public
 --- ***
---src
+-- src
 --- ***
---package.json
+-- package.json
 
--server
---node_modules
---build <<
---server.js
---package.json
+- server
+-- node_modules
+-- build <<
+-- server.js
+-- package.json
 This is a  structure you will have at the end.
 
--run commands below
+- run commands below
 cd React-Node-sample
 create-react-app app
 cd app
@@ -33,7 +33,7 @@ cd..
 cd server
 yarn install
 
--copy ./app/build folder into server folder.
+- copy ./app/build folder into server folder.
 run node server.js
 
 check localhost:80/
