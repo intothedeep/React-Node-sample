@@ -1,4 +1,5 @@
 var express = require('express');
+var apiController = require('../controllers/apiController');
 var router = express.Router();
 
 var cors = require('cors');
@@ -18,9 +19,7 @@ var cors = require('cors');
 // include before other routes
 router.options('*', cors());
 
-router.get('/', cors(), function (req, res) {
-  res.send({ status : "ok!" });
-});
+router.get('/', cors(), apiController.list);
 
 router.get('/article', function (req, res) {
   res.status(200).send({ messege : "This is a article!" });

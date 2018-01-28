@@ -24,7 +24,7 @@ httpServer.listen(HTTP_PORT, () => {
   console.log(typeof httpServer);
 });
 
-// https server!
+// https server
 const HTTPS_PORT = 443;
 const options = {
   key: fs.readFileSync('key.pem'),
