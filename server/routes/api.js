@@ -1,6 +1,5 @@
 var express = require('express');
 var cors = require('cors');
-var apiController = require('../controllers/apiController');
 var router = express.Router();
 
 var whitelist = ['*'];
@@ -17,7 +16,12 @@ var corsOptions = {
 
 
 router.options('*', cors(corsOptions));
-router.get('/', cors(corsOptions), apiController.list);
-router.get('/article', cors(corsOptions), apiController.article);
+router.get('/', cors(corsOptions), (req, res) => {
+  res.send({ status : "ok!" });
+});
+
+router.get('/article', cors(corsOptions), (req, res) => {
+  res.status(200).send({ messege : "This is a article!" });
+});
 
 module.exports = router;
