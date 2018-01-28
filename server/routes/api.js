@@ -1,26 +1,28 @@
 var express = require('express');
-var cors = require('cors');
 var router = express.Router();
 
-var whitelist = ['*'];
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-};
+var cors = require('cors');
+// var whitelist = ['https://localhost:443', 'https://localhost:80'];
+// var corsOptions = {
+//   origin: function (origin, callback) {
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true
+// };
 
 
-router.options('*', cors(corsOptions));
-router.get('/', cors(corsOptions), (req, res) => {
+// include before other routes
+router.options('*', cors());
+
+router.get('/', cors(), function (req, res) {
   res.send({ status : "ok!" });
 });
 
-router.get('/article', cors(corsOptions), (req, res) => {
+router.get('/article', function (req, res) {
   res.status(200).send({ messege : "This is a article!" });
 });
 
